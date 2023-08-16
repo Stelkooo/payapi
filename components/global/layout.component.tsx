@@ -1,5 +1,6 @@
 import { THome, TSite } from '@/types';
 import Header from './header/header.component';
+import Footer from './footer/footer.component';
 
 type Props = {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ export default function Layout({ children, page, site }: Props) {
     <div>
       <Header header={site?.header} />
       <main>{children}</main>
+      <Footer footer={site?.footer} />
     </div>
   );
 }
