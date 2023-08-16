@@ -8,7 +8,7 @@ interface Props {
 
 export default function HomePage({ home = {}, site = {} }: Props) {
   return (
-    <Layout>
+    <Layout page={home} site={site}>
       <h1>Home</h1>
     </Layout>
   );

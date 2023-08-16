@@ -1,12 +1,19 @@
-import React from 'react';
+import Link from 'next/link';
+
 import HeaderCloseButton from './header-close-button.component';
+import { TNavItem } from '@/types';
 
 type Props = {
   isMenuOpen: boolean;
   onClickHandler: (open: boolean) => void;
+  navItems?: TNavItem[];
 };
 
-export default function HeaderNavMenu({ isMenuOpen, onClickHandler }: Props) {
+export default function HeaderNavMenu({
+  isMenuOpen,
+  onClickHandler,
+  navItems,
+}: Props) {
   return (
     <div
       className={`${
@@ -18,9 +25,11 @@ export default function HeaderNavMenu({ isMenuOpen, onClickHandler }: Props) {
         <div className="h-[1px] w-full bg-link-water-white bg-opacity-[0.15]" />
       </div>
       <ul className="flex flex-col items-center gap-8 text-[20px] font-bold text-link-water-white text-opacity-70 md:flex-row md:gap-10 md:text-[15px] md:text-san-juan-blue">
-        <li>Pricing</li>
-        <li>About</li>
-        <li>Contact</li>
+        {navItems?.map((item) => (
+          <Link href={`/${item.page?.slug?.current}`} key={item._key}>
+            {item.title}
+          </Link>
+        ))}
         <li className="button button--primary max-md:w-full md:ml-auto">
           Schedule a Demo
         </li>
