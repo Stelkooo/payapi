@@ -1,11 +1,17 @@
 import { createClient } from 'next-sanity';
 
-import { apiVersion, dataset, projectId, useCdn } from '../env';
+import { THomePage } from '@/types';
 
-// eslint-disable-next-line import/prefer-default-export
+import { apiVersion, dataset, projectId, useCdn } from '../env';
+import { homePageQuery } from './queries';
+
 export const client = createClient({
   apiVersion,
   dataset,
   projectId,
   useCdn,
 });
+
+export async function getHomePage(): Promise<THomePage> {
+  return (await client.fetch(homePageQuery)) || ({} as THomePage);
+}

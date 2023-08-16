@@ -19,6 +19,10 @@ const config: Config = {
         'mirage-blue': '#1B262F',
         'charm-pink': '#DA6D97',
         'light-san-juan-blue': '#6C8294',
+        background: '#EDF3F8',
+      },
+      maxWidth: {
+        'screen-xl': '1110px',
       },
     },
   },

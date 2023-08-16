@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background;
+  }
+}
+
+@layer components {
+  .button {
+    @apply min-w-[130px] cursor-pointer rounded-3xl px-6 py-4 text-center text-[15px] font-bold tracking-[-0.115px];
+  }
+  .button--primary {
+    @apply bg-dark-pink text-link-water-white hover:bg-charm-pink disabled:bg-dark-pink;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  }
+  .button--secondary-light,
+  .button--secondary-dark {
+    @apply border;
+  }
+  .button--secondary-light {
+    @apply border-link-water-white text-link-water-white hover:bg-white hover:text-mirage-blue;
+  }
+  .button--secondary-dark {
+    @apply border-san-juan-blue text-san-juan-blue hover:bg-san-juan-blue hover:text-white;
+  }
+}

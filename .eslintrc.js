@@ -30,5 +30,25 @@ module.exports = {
       },
     ],
     'no-underscore-dangle': 0,
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        map: [['@', '.']],
+      },
+    },
   },
 };
