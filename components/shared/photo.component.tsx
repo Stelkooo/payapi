@@ -7,9 +7,10 @@ import { client } from '@/sanity/lib/client';
 type Props = {
   image: TImage;
   className?: string;
+  alt?: string;
 };
 
-export default function Photo({ image, className = '' }: Props) {
+export default function Photo({ image, className = '', alt = '' }: Props) {
   const imageProps = useNextSanityImage(client, image);
 
   return (
@@ -17,10 +18,10 @@ export default function Photo({ image, className = '' }: Props) {
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...imageProps}
       placeholder="blur"
-      blurDataURL={image.asset.metadata.blurHash}
+      blurDataURL={image.asset.metadata.lqip}
       className={className}
       sizes="(max-width: 800px) 100vw, 800px"
-      alt=""
+      alt={alt}
     />
   );
 }

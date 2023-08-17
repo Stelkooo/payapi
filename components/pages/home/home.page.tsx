@@ -10,10 +10,12 @@ interface Props {
 export default function HomePage({ home = {}, site = {} }: Props) {
   return (
     <Layout page={home} site={site}>
-      {home.modules?.map((module) => {
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        return <ModuleBuilder key={module._key} {...module} />;
-      })}
+      {home.modules &&
+        home.modules.map((module) => {
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          return <ModuleBuilder key={module._key} {...module} />;
+        })}
+      <h1>hi</h1>
     </Layout>
   );
 }

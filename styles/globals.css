@@ -23,6 +23,10 @@
   h6 {
     @apply text-mirage-blue;
   }
+
+  p {
+    @apply text-[15px]/[28px];
+  }
 }
 
 @layer components {
@@ -45,6 +49,11 @@
   }
 
   .h1--large {
-    @apply text-[32px]/[36px] tracking-[-0.246px] md:text-5xl/[56px] md:tracking-[-0.369px] xl:text-7xl xl:tracking-[-0.554px];
+    @apply xl:text-7xl xl:tracking-[-0.554px];
+  }
+
+  .h1--large,
+  .h2 {
+    @apply text-[32px]/[36px] tracking-[-0.246px] md:text-5xl/[56px] md:tracking-[-0.369px];
   }
 }

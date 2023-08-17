@@ -72,7 +72,9 @@ const modulesQuery = groq`
       ...,
       companies[]-> {
         name,
-        logo,
+        logo {
+          ${imageQuery},
+        },
         _id,
       },
     }
