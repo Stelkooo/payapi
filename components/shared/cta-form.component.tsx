@@ -1,6 +1,6 @@
 export default function CTAForm() {
   return (
-    <div className="space-y-4 md:relative md:mx-auto md:max-w-md md:space-y-0 xl:mx-[unset]">
+    <div className="space-y-4 md:relative md:mx-auto md:w-full md:max-w-md md:space-y-0 xl:mx-[unset]">
       <input
         type="email"
         placeholder="Enter email address"

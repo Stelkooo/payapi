@@ -85,10 +85,6 @@ export interface IFeaturesModule extends TBaseModule {
 
 export interface ICtaModule extends TBaseModule {
   title?: string;
-  formInput?: {
-    btnTxt?: string;
-    placeholder?: string;
-  };
 }
 
 export type TModules = (

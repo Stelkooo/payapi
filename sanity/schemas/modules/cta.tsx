@@ -14,19 +14,6 @@ export default defineField({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      title: 'Form Input',
-      name: 'formInput',
-      type: 'object',
-      fields: [
-        defineField({
-          title: 'Placeholder',
-          name: 'placeholder',
-          type: 'string',
-        }),
-        defineField({ title: 'Button Text', name: 'btnTxt', type: 'string' }),
-      ],
-    }),
   ],
   preview: {
     select: {
