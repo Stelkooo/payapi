@@ -12,6 +12,12 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      title: 'Plan Description',
+      name: 'desc',
+      type: 'text',
+      rows: 3,
+    }),
+    defineField({
       title: 'Plan Cost',
       name: 'cost',
       type: 'number',

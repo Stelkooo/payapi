@@ -87,6 +87,24 @@ export interface ICtaModule extends TBaseModule {
   title?: string;
 }
 
+export type TPlanOption = {
+  _key?: string;
+  title?: string;
+  isIncluded?: boolean;
+};
+
+export type TPlan = {
+  _id?: string;
+  name?: string;
+  desc?: string;
+  cost?: number;
+  options?: TPlanOption[];
+};
+
+export interface IPricingPlansModule extends TBaseModule {
+  plans?: TPlan[];
+}
+
 export type TModules = (
   | IHeroModule
   | IContentModule
@@ -94,6 +112,7 @@ export type TModules = (
   | IFeaturesModule
   | IHeroModule
   | ILogosModule
+  | IPricingPlansModule
 )[];
 
 export type THome = {
@@ -102,5 +121,21 @@ export type THome = {
 
 export type THomePage = {
   home?: THome;
+  site?: TSite;
+};
+
+export type TPage = {
+  title?: string;
+  slug?: Slug;
+  seo?: {
+    title?: string;
+    desc?: string;
+    image?: string;
+  };
+  modules?: TModules;
+};
+
+export type TPagePage = {
+  page?: TPage;
   site?: TSite;
 };

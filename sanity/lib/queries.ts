@@ -92,6 +92,15 @@ const modulesQuery = groq`
         },
       },
     },
+    _type == 'pricingPlansModule' => {
+      plans[]-> {
+        cost,
+        name,
+        desc,
+        _id,
+        options,
+      },
+    },
   }
 `;
 
@@ -101,10 +110,29 @@ const homeQuery = groq`
   }
 `;
 
-// eslint-disable-next-line import/prefer-default-export
 export const homePageQuery = groq`
   {
     ${homeQuery},
     ${siteQuery},
   }
+`;
+
+const pageQuery = groq`
+  "page": *[_type == "page" && slug.current == $slug][0] {
+    title,
+    slug,
+    seo,
+    ${modulesQuery},
+  }
+`;
+
+export const pagePageQuery = groq`
+  {
+    ${pageQuery},
+    ${siteQuery},
+  }
+`;
+
+export const pageSlugs = groq`
+  *[_type == "page"].slug.current
 `;
