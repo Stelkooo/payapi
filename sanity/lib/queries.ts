@@ -77,7 +77,13 @@ const modulesQuery = groq`
         },
         _id,
       },
-    }
+    },
+    _type == "contentModule" => {
+      ...,
+      image {
+        ${imageQuery},
+      },
+    },
   }
 `;
 
