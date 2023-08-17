@@ -30,7 +30,7 @@ export default function FooterSocials({ socials }: Props) {
       {socials?.map((social) => {
         if (social.url && social.icon) {
           return (
-            <Link href={social.url}>
+            <Link href={social.url} key={social._key}>
               <Image
                 src={getIcon(social.icon)}
                 alt={`Link to our ${social.icon} page`}

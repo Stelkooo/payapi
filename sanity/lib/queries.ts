@@ -52,9 +52,22 @@ const siteQuery = groq`
   }
 `;
 
+const imageQuery = groq`
+  asset-> {
+    ...,
+    metadata,
+  }
+`;
+
 const modulesQuery = groq`
   modules[] {
     ...,
+    _type == "heroModule" => {
+      ...,
+      image {
+        ${imageQuery},
+      },
+    },
     _type == "logosModule" => {
       ...,
       companies[]-> {

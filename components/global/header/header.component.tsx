@@ -17,7 +17,7 @@ export default function Header({ header }: Props) {
   };
 
   return (
-    <header>
+    <header className="relative">
       <nav className="mx-auto flex max-w-screen-xl items-center justify-between px-6 py-10 md:gap-16 md:px-10 xl:px-0">
         <Logo />
         <HeaderHamburgerButton onClickHandler={menuHandler} />

@@ -1,5 +1,5 @@
 import { Url } from 'next/dist/shared/lib/router/router';
-import { Image, Slug } from 'sanity';
+import { ImageAsset, Slug } from 'sanity';
 
 export type TNavItem = {
   _key?: string;
@@ -44,15 +44,19 @@ type TBaseModule = {
   _key?: string;
 };
 
+export type TImage = {
+  asset: ImageAsset;
+};
+
 export interface IHeroModule extends TBaseModule {
-  image?: Image;
+  image?: TImage;
   title?: string;
 }
 
 export type TCompany = {
   _id?: string;
   name?: string;
-  logo?: Image;
+  logo?: TImage;
 };
 
 export interface ILogosModule extends TBaseModule {
@@ -63,14 +67,14 @@ export interface ILogosModule extends TBaseModule {
 
 export interface IContentModule extends TBaseModule {
   type?: 'CodeContent' | 'ContentMockup' | 'TitleContent';
-  image?: Image;
+  image?: TImage;
   title?: string;
   desc?: string;
 }
 
 export type TFeature = {
   desc?: string;
-  icon?: Image;
+  icon?: TImage;
   _key?: string;
   title?: string;
 };

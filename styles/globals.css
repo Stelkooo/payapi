@@ -6,6 +6,23 @@
   body {
     @apply bg-background;
   }
+
+  h1,
+  h2,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-mirage-blue;
+  }
 }
 
 @layer components {
@@ -25,5 +42,9 @@
   }
   .button--secondary-dark {
     @apply border-san-juan-blue text-san-juan-blue hover:bg-san-juan-blue hover:text-white;
+  }
+
+  .h1--large {
+    @apply text-[32px]/[36px] tracking-[-0.246px] md:text-5xl/[56px] md:tracking-[-0.369px] xl:text-7xl xl:tracking-[-0.554px];
   }
 }

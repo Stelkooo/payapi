@@ -1,4 +1,5 @@
 import Layout from '@/components/global/layout.component';
+import ModuleBuilder from '@/components/modules/module-builder.component';
 import { THome, TSite } from '@/types';
 
 interface Props {
@@ -9,7 +10,10 @@ interface Props {
 export default function HomePage({ home = {}, site = {} }: Props) {
   return (
     <Layout page={home} site={site}>
-      <h1>Home</h1>
+      {home.modules?.map((module) => {
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        return <ModuleBuilder key={module._key} {...module} />;
+      })}
     </Layout>
   );
 }
