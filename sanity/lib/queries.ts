@@ -84,6 +84,14 @@ const modulesQuery = groq`
         ${imageQuery},
       },
     },
+    _type == 'featuresModule' => {
+      features[] {
+        ...,
+        icon {
+          ${imageQuery},
+        },
+      },
+    },
   }
 `;
 

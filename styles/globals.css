@@ -56,4 +56,8 @@
   .h2 {
     @apply text-[32px]/[36px] tracking-[-0.246px] md:text-5xl/[56px] md:tracking-[-0.369px];
   }
+
+  .h3--small {
+    @apply text-lg/[25px] font-bold tracking-[-0.138px];
+  }
 }

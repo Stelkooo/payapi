@@ -9,7 +9,7 @@ import {
 import HeroModule from './hero-module.component';
 import LogosModule from './logos/logos-module.component';
 import ContentModule from './content/content-module.component';
-import FeaturesModule from './features-module.component';
+import FeaturesModule from './features/features-module.component';
 import CtaModule from './cta-module.component';
 
 const ModulesMap = {
