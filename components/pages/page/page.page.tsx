@@ -10,6 +10,11 @@ type Props = {
 export default function PagePage({ page = {}, site = {} }: Props) {
   return (
     <Layout site={site}>
+      <div className="mb-10 px-6 md:mx-auto md:mb-14 md:max-w-xl md:px-0 xl:max-w-screen-xl">
+        <h1 className="h1--small text-center xl:max-w-[730px] xl:text-left">
+          {page.title}
+        </h1>
+      </div>
       {page.modules &&
         page.modules.map((module) => {
           // eslint-disable-next-line react/jsx-props-no-spreading
