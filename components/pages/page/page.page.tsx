@@ -9,7 +9,7 @@ type Props = {
 
 export default function PagePage({ page = {}, site = {} }: Props) {
   return (
-    <Layout page={page} site={site}>
+    <Layout site={site}>
       {page.modules &&
         page.modules.map((module) => {
           // eslint-disable-next-line react/jsx-props-no-spreading

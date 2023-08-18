@@ -1,6 +1,6 @@
 // import Image from 'next/image';
 
-import { THome, TSite } from '@/types';
+import { TSite } from '@/types';
 import Header from './header/header.component';
 import Footer from './footer/footer.component';
 
@@ -9,10 +9,9 @@ import Footer from './footer/footer.component';
 type Props = {
   children: React.ReactNode;
   site?: TSite;
-  page?: THome;
 };
 
-export default function Layout({ children, page, site }: Props) {
+export default function Layout({ children, site }: Props) {
   return (
     <div className="relative overflow-hidden">
       {/* <Image

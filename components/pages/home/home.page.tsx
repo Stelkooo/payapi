@@ -9,7 +9,7 @@ interface Props {
 
 export default function HomePage({ home = {}, site = {} }: Props) {
   return (
-    <Layout page={home} site={site}>
+    <Layout site={site}>
       {home.modules &&
         home.modules.map((module) => {
           // eslint-disable-next-line react/jsx-props-no-spreading
