@@ -122,6 +122,11 @@ export interface IStatsModule extends TBaseModule {
   stats?: TStat[];
 }
 
+export interface IContactModule extends TBaseModule {
+  title?: string;
+  companies?: TCompany[];
+}
+
 export type TModules = (
   | IHeroModule
   | IContentModule
@@ -132,6 +137,7 @@ export type TModules = (
   | IPricingPlansModule
   | IImageModule
   | IStatsModule
+  | IContactModule
 )[];
 
 export type THome = {

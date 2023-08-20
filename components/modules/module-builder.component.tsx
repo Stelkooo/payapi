@@ -7,6 +7,7 @@ import {
   IPricingPlansModule,
   IImageModule,
   IStatsModule,
+  IContactModule,
 } from '@/types';
 
 import HeroModule from './hero-module.component';
@@ -17,6 +18,7 @@ import CtaModule from './cta-module.component';
 import PricingPlanModule from './pricing-plans/pricing-plans-module.component';
 import ImageModule from './image-module.component';
 import StatsModule from './stats/stats-module.component';
+import ContactModule from './contact/contact-module.component';
 
 const ModulesMap = {
   heroModule: HeroModule,
@@ -27,6 +29,7 @@ const ModulesMap = {
   pricingPlansModule: PricingPlanModule,
   imageModule: ImageModule,
   statsModule: StatsModule,
+  contactModule: ContactModule,
 };
 
 type Props =
@@ -37,7 +40,8 @@ type Props =
   | ICtaModule
   | IPricingPlansModule
   | IImageModule
-  | IStatsModule;
+  | IStatsModule
+  | IContactModule;
 
 export default function ModuleBuilder({ ...props }: Props) {
   if (!props._type) throw new Error('Object does not have a "_type" property');

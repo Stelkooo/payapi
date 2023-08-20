@@ -13,5 +13,6 @@ export default defineField({
     defineArrayMember({ type: 'imageModule' }),
     defineArrayMember({ type: 'logosModule' }),
     defineArrayMember({ type: 'heroModule' }),
+    defineArrayMember({ type: 'contactModule' }),
   ],
 });

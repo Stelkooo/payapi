@@ -112,6 +112,16 @@ const modulesQuery = groq`
         ${imageQuery},
       },
     },
+    _type == "contactModule" => {
+      ...,
+      companies[]-> {
+        name,
+        logo {
+          ${imageQuery},
+        },
+        _id,
+      },
+    },
   }
 `;
 

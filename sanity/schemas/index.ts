@@ -9,6 +9,7 @@ import page from './documents/page';
 import plan from './documents/plan';
 import seoSettings from './documents/seo-settings';
 
+import contact from './modules/contact';
 import content from './modules/content';
 import cta from './modules/cta';
 import features from './modules/features';
@@ -34,6 +35,7 @@ const singletons = [
 ];
 
 const modules = [
+  contact,
   content,
   cta,
   features,
