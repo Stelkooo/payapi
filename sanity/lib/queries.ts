@@ -101,6 +101,17 @@ const modulesQuery = groq`
         options,
       },
     },
+    _type == "imageModule" => {
+      mobileImage {
+        ${imageQuery},
+      },
+      tabletImage {
+        ${imageQuery},
+      },
+      desktopImage {
+        ${imageQuery},
+      },
+    },
   }
 `;
 

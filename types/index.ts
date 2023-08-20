@@ -105,6 +105,23 @@ export interface IPricingPlansModule extends TBaseModule {
   plans?: TPlan[];
 }
 
+export interface IImageModule extends TBaseModule {
+  mobileImage?: TImage;
+  tabletImage?: TImage;
+  desktopImage?: TImage;
+}
+
+export type TStat = {
+  type?: 'Plus' | 'Nothing' | 'Million';
+  number?: number;
+  name?: string;
+  _key?: string;
+};
+
+export interface IStatsModule extends TBaseModule {
+  stats?: TStat[];
+}
+
 export type TModules = (
   | IHeroModule
   | IContentModule
@@ -113,6 +130,8 @@ export type TModules = (
   | IHeroModule
   | ILogosModule
   | IPricingPlansModule
+  | IImageModule
+  | IStatsModule
 )[];
 
 export type THome = {

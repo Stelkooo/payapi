@@ -8,6 +8,8 @@ type Props = {
 };
 
 export default function PagePage({ page = {}, site = {} }: Props) {
+  console.log(page.modules);
+
   return (
     <Layout site={site}>
       <div className="mb-10 px-6 md:mx-auto md:mb-14 md:max-w-xl md:px-0 xl:max-w-screen-xl">

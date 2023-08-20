@@ -8,9 +8,15 @@ type Props = {
   image: TImage;
   className?: string;
   alt?: string;
+  sizes?: string;
 };
 
-export default function Photo({ image, className = '', alt = '' }: Props) {
+export default function Photo({
+  image,
+  className = '',
+  alt = '',
+  sizes = '(max-width: 800px) 100vw, 800px',
+}: Props) {
   const imageProps = useNextSanityImage(client, image);
 
   return (
@@ -20,7 +26,7 @@ export default function Photo({ image, className = '', alt = '' }: Props) {
       placeholder="blur"
       blurDataURL={image.asset.metadata.lqip}
       className={className}
-      sizes="(max-width: 800px) 100vw, 800px"
+      sizes={sizes}
       alt={alt}
     />
   );
